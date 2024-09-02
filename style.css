@@ -5,3 +5,8 @@ body {
 .card-header{
   background: #c9ddff;
 }
+.btn-group, .btn-secondary {
+	position: relative;
+	display: inline-flex;
+	vertical-align: middle;
+}
