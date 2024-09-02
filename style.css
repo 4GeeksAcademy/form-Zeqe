@@ -2,8 +2,11 @@ body {
 	margin: 0;
 	background-color: white;
 }
-.card-header{
-  background: #c9ddff;
+.card-header {
+	background: #c9ddff;
+}
+.alert {
+	display: none;
 }
 .btn-group, .btn-secondary {
 	position: relative;
