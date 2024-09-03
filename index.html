@@ -1,184 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">      
-    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">          
-    <meta name="apple-mobile-web-app-title" content="CodePen">
-    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
-    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
-    <title>Card with Bootstrap Form</title>
-    <link rel="canonical" href="https://codepen.io/alesanchezr/pen/zeaaVx">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <meta name="description" content="Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-10 offset-md-1">
-            <div class="card card-outline-secondary">
-                <div class="card-header">
-                    <h3 class="mb-0">Payment form example</h3>
-                </div>
-                <div class="card-body">
-                    <div id="error-msg" class="alert alert-danger">Some fields are missing</div>
-                    <div id="success-msg" class="alert alert-success">Form submitted successfully!</div>
-                    <form id="payment-form" method="post" action="#">
-                        <div class="row mt-4">
-                            <div class="col-sm-5 pb-3">
-                                <label for="exampleAccount">Card #</label> 
-                                <input class="form-control" id="exampleAccount" placeholder="XXXXXXXXXXXXXXXX" type="text">
-                            </div>
-                            <div class="col-sm-3 pb-3">
-                                <label for="exampleCtrl">CVC #</label> 
-                                <input class="form-control" id="exampleCtrl" placeholder="0000" type="text">
-                            </div>
-                            <div class="col-sm-4 pb-3">
-                                <label for="exampleAmount">Amount</label>
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fas fa-dollar-sign"></i>
-                                    </div>
-                                    <input class="form-control" id="exampleAmount" placeholder="Amount" type="number">
-                                </div>
-                            </div>
-                            <div class="col-sm-6 pb-3">
-                                <label for="exampleFirst">First Name</label> 
-                                <input class="form-control" id="exampleFirst" type="text">
-                            </div>
-                            <div class="col-sm-6 pb-3">
-                                <label for="exampleLast">Last Name</label> 
-                                <input class="form-control" id="exampleLast" type="text">
-                            </div>
-                            <div class="col-sm-6 pb-3">
-                                <label for="exampleCity">City</label> 
-                                <input class="form-control" id="exampleCity" type="text">
-                            </div>
-                            <div class="col-sm-3 pb-3">
-                                <label for="exampleSt">State</label> 
-                                <select class="form-control custom-select" id="exampleSt">
-                                    <option class="text-white bg-warning">
-                                        Pick a state
-                                    </option>
-                                    <option value="AL">Alabama</option>
-                                    <option value="AK">Alaska</option>
-                                    <option value="AZ">Arizona</option>
-                                    <option value="AR">Arkansas</option>
-                                    <option value="CA">California</option>
-                                    <option value="CO">Colorado</option>
-                                    <option value="CT">Connecticut</option>
-                                    <option value="DE">Delaware</option>
-                                    <option value="DC">District Of Columbia</option>
-                                    <option value="FL">Florida</option>
-                                    <option value="GA">Georgia</option>
-                                    <option value="HI">Hawaii</option>
-                                    <option value="ID">Idaho</option>
-                                    <option value="IL">Illinois</option>
-                                    <option value="IN">Indiana</option>
-                                    <option value="IA">Iowa</option>
-                                    <option value="KS">Kansas</option>
-                                    <option value="KY">Kentucky</option>
-                                    <option value="LA">Louisiana</option>
-                                    <option value="ME">Maine</option>
-                                    <option value="MD">Maryland</option>
-                                    <option value="MA">Massachusetts</option>
-                                    <option value="MI">Michigan</option>
-                                    <option value="MN">Minnesota</option>
-                                    <option value="MS">Mississippi</option>
-                                    <option value="MO">Missouri</option>
-                                    <option value="MT">Montana</option>
-                                    <option value="NE">Nebraska</option>
-                                    <option value="NV">Nevada</option>
-                                    <option value="NH">New Hampshire</option>
-                                    <option value="NJ">New Jersey</option>
-                                    <option value="NM">New Mexico</option>
-                                    <option value="NY">New York</option>
-                                    <option value="NC">North Carolina</option>
-                                    <option value="ND">North Dakota</option>
-                                    <option value="OH">Ohio</option>
-                                    <option value="OK">Oklahoma</option>
-                                    <option value="OR">Oregon</option>
-                                    <option value="PA">Pennsylvania</option>
-                                    <option value="RI">Rhode Island</option>
-                                    <option value="SC">South Carolina</option>
-                                    <option value="SD">South Dakota</option>
-                                    <option value="TN">Tennessee</option>
-                                    <option value="TX">Texas</option>
-                                    <option value="UT">Utah</option>
-                                    <option value="VT">Vermont</option>
-                                    <option value="VA">Virginia</option>
-                                    <option value="WA">Washington</option>
-                                    <option value="WV">West Virginia</option>
-                                    <option value="WI">Wisconsin</option>
-                                    <option value="WY">Wyoming</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-3 pb-3">
-                                <label for="exampleZip">Postal Code</label> 
-                                <input class="form-control" id="exampleZip" type="text">
-                            </div>
-                            <div class="col-md-6 pb-3">
-                                <p for="exampleAccount">We accept:</p>
-                                <div class="btn-group" data-toggle="buttons">
-                                    <label class="btn btn-secondary">
-                                        <input autocomplete="off" checked id="blue" name="options" type="radio">
-                                        <i class="fab fa-cc-mastercard"></i>
-                                    </label> 
-                                    <label class="btn btn-secondary">
-                                        <input autocomplete="off" id="red" name="options" type="radio">
-                                        <i class="fab fa-cc-visa"></i>
-                                    </label> 
-                                    <label class="btn btn-secondary">
-                                        <input autocomplete="off" id="green" name="options" type="radio">
-                                        <i class="fab fa-cc-diners-club"></i>
-                                    </label> 
-                                    <label class="btn btn-secondary">
-                                        <input autocomplete="off" id="yellow" name="options" type="radio">
-                                        <i class="fab fa-cc-amex"></i>
-                                    </label> 
-                                </div>
-                            </div>
-                            <div class="col-md-6 pb-3">
-                                <label for="exampleMessage">Message</label> 
-                                <textarea class="form-control" id="complexExampleMessage" rows="3"></textarea> 
-                                <small class="text-muted">Add any notes here.</small>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="card-footer">
-                    <div class="float-right">
-                        <button class="btn btn-secondary" type="reset">Cancel</button> 
-                        <button class="btn btn-primary" type="button" id="sendForm">Send</button>
-                    </div>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form con HTML5 y Bootstrap </title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-md">
+      <div class="card">
+        <div class="card-header">
+          <h1 class="card-tittle">Payment form example</h1>
         </div>
+        <form action="/" method="get" >
+          <div class="card-body">
+            <div class="alert alert-danger" role="alert">
+              Some Fields are Missing
+            </div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12 col-md-6 mb-3">
+                  <label for="Card-Number" class="form-label"> # Tarjeta </label>
+                  <input
+                    class="form-control"
+                    name="Card-Number"
+                    type="number"
+                    pattern="\d{16}"
+                    placeholder="XXXX XXXX XXXX XXXX"
+                    value="" 
+                    required/>
+                </div>
+
+                <div class="col-sm-12 col-md-3 mb-3">
+                  <label for="CVC" class="form-label">CVC #</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="cvc"
+                    placeholder="000"
+                    pattern="\d{3}"
+                    maxlength="3"
+                    value="" 
+                    required/>
+                </div>
+
+                <div class="col-sm-12 col-md-3 mb-3">
+                  <label for="amount" class="form-label">Monto</label>
+                  <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input
+                      type="number"
+                      class="form-control"
+                      min="50"
+                      name="amount"
+                      aria-label="Amount (to the nearest dollar)"
+                      placeholder="Monto" 
+                      required/>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-md-6 mb-3">
+                  <label for="firstName" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    id="firstName"
+                    value=""
+                    class="form-control" required/>
+                </div>
+
+                <div class="col-sm-12 col-md-6 mb-3">
+                  <label for="lastName" class="form-label">Apellido</label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    id="lastName"
+                    value=""
+                    class="form-control" required/>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-6 mb-3">
+                  <label for="city" class="form-label">Ciudad</label>
+                  <input
+                    type="text"
+                    name="city"
+                    id="city-input"
+                    value=""
+                    class="form-control" required/>
+                </div>
+
+                <div class="col-sm-12 col-md-3 mb-3">
+                  <label for="state" class="form-label">Provincia</label>
+                  <select name="state" id="state-input" class="form-select" required>
+                    <option selected >Selecciona una Provincia</option>
+                    <option value="1">Buenos Aires</option>
+                    <option value="2">Córdoba</option>
+                    <option value="3">Santa Fé</option>
+                  </select>
+                </div>
+
+                <div class="col-sm-12 col-md-3 mb-3">
+                  <label for="postalCode" class="form-label">Código Postal</label>
+                  <input type="text" name="postalCode" class="form-control" required />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-6 mb-3">
+                  <h4>Aceptamos:</h4>
+                  <div
+                    class="d-flex justify-content-between p-2 bg-secondary rounded w-50">
+                    <input
+                      type="radio"
+                      name="card-type"
+                      id="card-input1"
+                      class="form-check" />
+                    <label for="card-input1" class="form-check-label"
+                      ><i class="fa-brands fa-cc-mastercard"></i
+                    ></label>
+
+                    <input
+                      type="radio"
+                      name="card-type"
+                      id="card-input2"
+                      class="form-check" />
+                    <label for="card-input2" class="form-check-label"
+                      ><i class="fa-brands fa-cc-visa"></i
+                    ></label>
+
+                    <input
+                      type="radio"
+                      name="card-type"
+                      id="card-input3"
+                      class="form-check" />
+                    <label for="card-input3" class="form-check-label"
+                      ><i class="fa-brands fa-cc-diners-club"></i
+                    ></label>
+                    <input
+                      type="radio"
+                      name="card-type"
+                      id="card-input4"
+                      class="form-check" />
+                    <label for="card-input4" class="form-check-label"
+                      ><i class="fa-brands fa-cc-discover"></i
+                    ></label>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6 mb-3">
+                  <label for="comments" class="form-label">Mensaje</label>
+                  <textarea
+                    name="comments"
+                    id="comments-input"
+                    class="form-control"
+                    rows="3"></textarea>
+                  <p class="text-secondary fs-6">Deje sugerencias e inquietudes aquí</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="button-group d-flex justify-content-end">
+              <button type="reset" class="btn btn-secondary me-2">Cancelar</button>
+              <button type="submit" class="btn btn-primary ms-2">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <script>
-        document.getElementById('sendForm').addEventListener('click', function() {
-            let formIsValid = true;
-            const inputs = document.querySelectorAll('#payment-form input, #payment-form select');
-            inputs.forEach(function(input) {
-                if (input.value === '') {
-                    formIsValid = false;
-                    input.classList.add('is-invalid');
-                } else {
-                    input.classList.remove('is-invalid');
-                }
-            });
-
-            if (formIsValid) {
-                document.getElementById('error-msg').style.display = 'none';
-                document.getElementById('success-msg').style.display = 'block';
-            } else {
-                document.getElementById('error-msg').style.display = 'block';
-                document.getElementById('success-msg').style.display = 'none';
-            }
-        });
-    </script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+  </body>
 </html>
